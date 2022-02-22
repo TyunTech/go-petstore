@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/davecgh/go-spew/spew"
-	sdk "github.com/scottwinkler/go-petstore"
+	sdk "tyun.cn/go-petstore"
 )
 
 func main() {

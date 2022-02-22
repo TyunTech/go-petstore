@@ -23,7 +23,7 @@ const (
 	userAgent = "go-petstore"
 
 	// DefaultAddress of Petstore server
-	DefaultAddress = "http://localhost:8080"
+	DefaultAddress = "http://localhost:8000"
 	// DefaultBasePath on which the API is served.
 	DefaultBasePath = "/api"
 )
@@ -152,7 +152,7 @@ func (c *Client) newRequest(method, path string, v interface{}) (*http.Request, 
 			body = bytes.NewReader(dat)
 		}
 	}
-	
+
 	req, err := http.NewRequest(method, u.String(), body)
 	if err != nil {
 		return nil, err
@@ -179,11 +179,11 @@ func (c *Client) do(ctx context.Context, req *http.Request, v interface{}) error
 	// Add the context to the request.
 	req = req.WithContext(ctx)
 	log.Printf("[DEBUG] go-petstore request: %v", req)
-	
+
 	// wake up the function?
-	tempReq, _ := c.newRequest("GET","pets",nil)
+	tempReq, _ := c.newRequest("GET", "pets", nil)
 	c.http.Do(tempReq)
-		  
+
 	// Execute the request and check the response.
 	resp, err := c.http.Do(req)
 	if err != nil {
