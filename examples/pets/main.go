@@ -5,13 +5,13 @@ import (
 	"log"
 
 	"github.com/davecgh/go-spew/spew"
-	sdk "tyun.cn/go-petstore"
+	sdk "github.com/TyunTech/go-petstore"
 )
 
 func main() {
 	config := &sdk.Config{
 		//Address: "insert-your-petstore-address-here",
-		Address: "https://g6pny6dke9.execute-api.us-west-2.amazonaws.com/petstore",
+        Address: "http://localhost:8000",
 	}
 
 	client, err := sdk.NewClient(config)
