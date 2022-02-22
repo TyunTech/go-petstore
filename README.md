@@ -1,23 +1,19 @@
-Petstore Go Client
-==============================
-This is an API client for [Petstore](https://github.com/scottwinkler/manning-code).
+# Petstore Go Client
+
+This is an API client for Petstore.
 
 ## Installation
 
 Installation can be done with a normal `go get`:
 
+```bash
+go get -u github.com/TyunTech/go-petstore
 ```
-go get -u github.com/scottwinkler/go-petstore
-```
-
-## Documentation
-
-For complete usage of the API client, see the full [package docs](https://godoc.org/github.com/scottwinkler/go-petstore).
 
 ## Usage
 
 ```go
-import sdk "github.com/scottwinkler/go-petstore"
+import sdk "github.com/TyunTech/go-petstore"
 ```
 
 Construct a new Petstore client, then use the various endpoints on the client to
@@ -51,7 +47,7 @@ package main
 import (
 	"log"
 
-	sdk "github.com/scottwinkler/go-petstore"
+	sdk "github.com/TyunTech/go-petstore"
 )
 
 func main() {
